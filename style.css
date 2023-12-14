@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: red;
+    overflow: hidden;
+    /* background-size: 100vw 100vh; */
+    min-width: 1200px;
+}
+
+.gamecontainer {
+    /* background-image: url(./ezgif.com-gif-maker.gif); */
+    background-image: url(./images/level2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    overflow: hidden;
+    height: 100vh;
+    min-width: 1200px;
+}
+.setitem{
+    display: flex;
+    justify-content: space-around;
+    /* text-align: center;
+    align-items: center; */
+    margin-top: 8vh;
+}
+#gameOver{
+    margin-top: 15vh;
+}
+.heading-left{
+    margin-bottom: 3vh;
+}
+.score{
+    display: flex;
+    gap: 20px
+}
+
+.heading-right{
+    display: flex;
+    gap: 20px;
+    height: 40px;
+    /* margin-top: 10vh; */
+}
+.main{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.btne button {
+    height: 3rem;
+    width: 12rem;
+    padding: 10px;
+    color: red;
+    cursor: pointer;
+    margin-top: 50vh;
+    margin-right: 10vh;
+    border: 2px solid #fff;
+    border-radius: 5rem;
+    background-color: transparent;
+    visibility: hidden;
+    font-size: 1rem;
+    overflow: hidden;
+    /* background-color: red; */
+}
+
+
+.dino {
+    background-image: url(./zRz.gif);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    width: 235px;
+    height: 250px;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 74px;
+    /* border: 1px solid #000; */
+}
+
+.obstacle {
+    width: 280px;
+    height: 230px;
+    background-image: url(./d889cdt-a5196d7d-80f8-452c-9c63-82536ab9fb8d.gif);
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 44vw;
+    /* border-left: 5px solid red; */
+
+
+
+}
+
+.animateDino {
+    animation: dino 0.6s linear;
+}
+
+@keyframes dino {
+    0% {
+        bottom: 0;
+    }
+
+    50% {
+        bottom: 422px;
+    }
+
+    100% {
+        bottom: 0;
+
+    }
+}
+
+.obstacleAni {
+    animation: obstacleAni 5s linear infinite;
+}
+
+.gameOver {
+    position: relative;
+    font-weight: bold;
+    font-size: 53px;
+    text-align: center;
+    /* visibility: hidden; */
+    font-family: 'Dancing Script', cursive;
+    color: #fff;
+    /* font-family: 'Open Sans', sans-serif; */
+
+}
+
+#highScore{
+    color: #e23b11;
+    border: 2px solid #fff;
+    padding: 10px;
+    font-family: sans-serif;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#level {
+    color: #e23b11;
+    /* position: absolute; */
+    /* top: 31px; */
+    /* left: 30px; */
+    border: 2px solid #fff;
+    padding: 10px;
+    font-family: sans-serif;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+#scoreCont {
+    color: #e23b11;
+    /* position: absolute;
+    right: 100px;
+    top: 31px; */
+    border: 2px solid #fff;
+    padding: 10px;
+    font-family: sans-serif;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+@keyframes obstacleAni {
+    0% {
+        left: 100vw;
+    }
+
+    100% {
+        left: -10vw;
+    }
+}
+
+#btn {
+    padding: 10px;
+    width: 60px;
+    height: 40px;
+    color: #e23b11;
+    /* position: absolute; */
+    /* top: 31px; */
+    /* right: 30px; */
+    border: 2px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+@media (max-width:1200px) {
+    .gamecontainer{
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .gameOver {
+        font-size: 2rem;
+        padding: 15px;
+    }
+
+    .btne button {
+        bottom: 1rem;
+        right: 2rem;
+        height: 3rem;
+        width: 5rem;
+        font-size: 10px;
+    }
+
+    .dino {
+        width: 200px;
+        height: 200px;
+    }
+
+    .obstacle {
+        height: 200px;
+        width: 250px;
+    }
+
+    @media (max-width:750px) {
+        .dino {
+            width: 200px;
+            height: 200px;
+        }
+
+        .obstacle {
+            height: 200px;
+            width: 250px;
+        }
+    }
+
+}

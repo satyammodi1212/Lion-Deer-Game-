@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/lion-face.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&family=Open+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Lion |Deer|</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <div class="gamecontainer">
+      <div class="setitem">
+        <div class="heading-left">
+          <div class="score">
+            <div id="highScore">High-Score : 0</div>
+            <div id="level">Level: 0</div>
+          </div>
+        </div>
+        <div class="heading-middle">
+          <div class="gameOver" id="gameOver">Welcome to Forest - Lion & Deer</div>
+        </div>
+        <div class="heading-right">
+          <div id="scoreCont">Your Score: 0</div>
+          <button id="btn" onclick="play()">Pause</button>
+        </div>
+      </div>
+      <div class="main">
+        <div class="dino"></div>
+        <div class="obstacle obstacleAni"></div>
+        <div class="btne">
+          <button
+            id="btne"
+            type="submit"
+            onclick="return locationreload();"
+            class="btn btn-success"
+          >
+            Play Again
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function locationreload() {
+        location.reload();
+      }
+    </script>
+  </body>
+</html>
