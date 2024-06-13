@@ -61,6 +61,12 @@ setInterval(() => {
     obstacle.style.borderLeft = "5px solid red";
     newscore = score;
     highscore = 0;
+
+    window.addEventListener('keydown', (event) => {
+      if (event.key == "Enter") {
+        location.reload();
+      }
+    })
     function updatehighscore(score) {
       let highEl = document.getElementById("highScore");
       if (newscore > highscore) {
